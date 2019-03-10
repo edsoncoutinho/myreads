@@ -6,15 +6,15 @@ import BookAuthors from './BookAuthors'
 
 class Book extends Component {
   render() {
-    const { book } = this.props
+    const { book, handleBooks } = this.props
     return (
       <div className="book">
         <div className="book-top">
-          <BookCover bookcover={book.cover} />
-          <BookShelfChanger shelf={book.shelf} />
+          <BookCover imageLinks={book.imageLinks} />
+          <BookShelfChanger book={book} handleBooks={handleBooks} />
         </div>
         <BookTitle title={book.title} />
-        <BookAuthors authors={book.author} />
+        <BookAuthors authors={book.authors} />
       </div>
     )
   }
