@@ -2,8 +2,15 @@ import React, { Component } from 'react'
 import SearchBooksBar from './SearchBooksBar'
 import BooksGrid from './BooksGrid'
 import * as BooksAPI from '../BooksAPI'
+import PropTypes from 'prop-types'
 
 class SearchBooks extends Component {
+  static propTypes = {
+    books: PropTypes.array.isRequired,
+    handleBooks: PropTypes.func.isRequired,
+    showSearchPage: PropTypes.func.isRequired
+  }
+
   constructor(props) {
     super(props);
 

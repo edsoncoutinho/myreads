@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class SearchBooksBar extends Component {
+  static propTypes = {
+    handleSearchBooks: PropTypes.func.isRequired,
+    showSearchPage: PropTypes.func.isRequired
+  }
   render() {
     const { handleSearchBooks, showSearchPage } = this.props
 

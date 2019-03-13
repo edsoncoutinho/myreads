@@ -2,10 +2,17 @@ import React, { Component } from 'react'
 import Header from './Header'
 import Bookshelf from './Bookshelf'
 import SearchLink from './SearchLink'
+import PropTypes from 'prop-types'
 
 class ListBooks extends Component {
+  static propTypes = {
+    books: PropTypes.array.isRequired,
+    handleBooks: PropTypes.func.isRequired,
+    showSearchPage: PropTypes.func.isRequired
+  }
+
   render() {
-    const { books, handleBooks ,showSearchPage } = this.props
+    const { books, handleBooks, showSearchPage } = this.props
 
     const types = [
       { name: 'currentlyReading', title: 'Currently Reading' },

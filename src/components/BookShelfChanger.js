@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import * as BooksAPI from '../BooksAPI'
+import PropTypes from 'prop-types'
 
 class BookShelfChanger extends Component {
+  static propTypes = {
+    book: PropTypes.object.isRequired,
+    handleBooks: PropTypes.func.isRequired
+  }
   render() {
     const { book, handleBooks } = this.props
 
