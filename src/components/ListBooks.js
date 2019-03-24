@@ -7,12 +7,11 @@ import PropTypes from 'prop-types'
 class ListBooks extends Component {
   static propTypes = {
     books: PropTypes.array.isRequired,
-    handleBooks: PropTypes.func.isRequired,
-    showSearchPage: PropTypes.func.isRequired
+    handleBooks: PropTypes.func.isRequired
   }
 
   render() {
-    const { books, handleBooks, showSearchPage } = this.props
+    const { books, handleBooks } = this.props
 
     const types = [
       { name: 'currentlyReading', title: 'Currently Reading' },
@@ -31,9 +30,7 @@ class ListBooks extends Component {
         <div className="list-books-content">
           {bookshelves}
         </div>
-        <SearchLink
-          showSearchPage={showSearchPage}
-        />
+        <SearchLink />
       </div>
     )
   }

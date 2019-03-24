@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class SearchLink extends Component {
   render() {
-    const { showSearchPage } = this.props
     return (
-      <div className="open-search">
-        <button onClick={() => showSearchPage(true)}>Add a book</button>
-      </div>
+      <Link to="/search" className="open-search">
+        <button>Add a book</button>
+      </Link>
     )
   }
 }

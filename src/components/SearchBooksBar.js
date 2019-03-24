@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 class SearchBooksBar extends Component {
   static propTypes = {
-    handleSearchBooks: PropTypes.func.isRequired,
-    showSearchPage: PropTypes.func.isRequired
+    handleSearchBooks: PropTypes.func.isRequired
   }
   render() {
-    const { handleSearchBooks, showSearchPage } = this.props
+    const { handleSearchBooks } = this.props
 
     const onSearchBooks = event => handleSearchBooks(event.target.value)
 
     return (
       <div className="search-books-bar">
-        <button className="close-search" onClick={() => showSearchPage(false)}>Close</button>
+        <Link className="close-search" to="/">Close</Link>
         <div className="search-books-input-wrapper">
           <input 
             type="text"

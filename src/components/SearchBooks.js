@@ -7,8 +7,7 @@ import PropTypes from 'prop-types'
 class SearchBooks extends Component {
   static propTypes = {
     books: PropTypes.array.isRequired,
-    handleBooks: PropTypes.func.isRequired,
-    showSearchPage: PropTypes.func.isRequired
+    handleBooks: PropTypes.func.isRequired
   }
 
   constructor(props) {
@@ -43,7 +42,6 @@ class SearchBooks extends Component {
       <div className="search-books">
         <SearchBooksBar
           handleSearchBooks={this.handleSearchBooks}
-          showSearchPage={this.props.showSearchPage}
         />
         <div className="search-books-results">
           <BooksGrid books={this.state.filteredBooks} handleBooks={this.props.handleBooks} />
