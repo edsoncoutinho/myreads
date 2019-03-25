@@ -14,8 +14,7 @@ class SearchBooks extends Component {
     super(props);
 
     this.state = {
-      filteredBooks: [],
-      loading: true
+      filteredBooks: []
     }
   }
 
