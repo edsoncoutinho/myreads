@@ -19,14 +19,18 @@ class SearchBooks extends Component {
   }
 
   handleSearchBooks = query => {
-    BooksAPI.search(query)
-      .then((filteredBooks = []) => {
-        filteredBooks = filteredBooks && filteredBooks.error
-          ? []
-          : this.handleBookShelf(filteredBooks)
+    if (!query.length) {
+      this.setState({ filteredBooks: [] })
+    } else {
+      BooksAPI.search(query)
+        .then((filteredBooks = []) => {
+          filteredBooks = filteredBooks && filteredBooks.error
+            ? []
+            : this.handleBookShelf(filteredBooks)
 
-        this.setState({ filteredBooks })
-      })
+          this.setState({ filteredBooks })
+        })
+    }
   }
 
   handleBookShelf = books => books.map((book = []) => {
