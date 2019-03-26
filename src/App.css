@@ -197,3 +197,24 @@ button:active {
   text-align: center;
   font-size: 0.8em;
 }
+
+.pagenotfound {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 1.8em;
+  top: 5em;
+}
+
+.pagenotfound-code {
+  font-size: 4.5em;
+  margin: 0;
+}
+
+.pagenotfound-link {
+  background-color: #2e7c31;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
